@@ -32,6 +32,9 @@ please contact mla_licensing@microchip.com
 #include "pic32mm_pe.h"
 #include "ejtag.h"
 
+// in main.c
+void processCmd( uint8_t cmd);
+
 /** VARIABLES ******************************************************/
 
 static bool buttonPressed;
@@ -156,7 +159,8 @@ void APP_DeviceCDCBasicDemoTasks()
             /* After processing all of the received data, we need to send out
              * the "echo" data now.
              */
-            putUSBUSART(writeBuffer,numBytesRead);
+            //putUSBUSART(writeBuffer,numBytesRead);
+            processCmd( writeBuffer[0]);
         }
     }
 

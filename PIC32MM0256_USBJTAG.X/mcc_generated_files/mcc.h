@@ -49,9 +49,9 @@
 #include "pin_manager.h"
 #include <stdint.h>
 #include <stdbool.h>
-#include "spi2.h"
 #include "interrupt_manager.h"
 #include "exceptions.h"
+#include "spi2.h"
 #include "usb/usb.h"
 
 #define _XTAL_FREQ  24000000UL
